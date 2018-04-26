@@ -5,5 +5,8 @@ export default {
     params: {
       account_name: Name
     }
+  },
+  get_info: {
+
   }
 };
