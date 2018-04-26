@@ -24,6 +24,6 @@ export const validate = async (params = {}, schema = {}) => {
     return await Joi.validate(params, schema);
   } catch (error) {
     const detail = error.details[0];
-    return detail.message;
+    throw new Error(detail.message);
   }
 };

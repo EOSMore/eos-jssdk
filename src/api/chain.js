@@ -3,7 +3,7 @@ import { Name, String, BlockIdOrNum, Boolean, Number } from '../schema';
 export default {
   get_account: {
     params: {
-      account_name: Name
+      account_name: Name.required()
     }
   },
   get_code: {
