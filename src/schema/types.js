@@ -5,11 +5,13 @@ const String = Joi.string();
 const BlockIdOrNum = Joi.alternatives().try(Joi.string(), Joi.number().min(1));
 const Boolean = Joi.boolean();
 const Number = Joi.number();
+const PublicKey = Joi.string().length(53);
 
 export {
   Name,
   String,
   BlockIdOrNum,
   Boolean,
-  Number
+  Number,
+  PublicKey
 };

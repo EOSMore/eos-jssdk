@@ -1,6 +1,11 @@
-import { Name, Number, String } from '../schema';
+import { Name, Number, String, PublicKey } from '../schema';
 
 export default {
+  get_key_accounts: {
+    params: {
+      public_key: PublicKey.required()
+    }
+  },
   get_transactions: {
     params: {
       account_name: Name.required(),

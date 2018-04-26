@@ -79,6 +79,11 @@ Retrieve the contents of a database table
 ```javascript
 eos.getTableRows('eosio.token', 'eosio', 'accounts')
 ```
+### getKeyAccounts(public_key)
+Retrieve accounts associated with a public key
+```javascript
+eos.getKeyAccounts("EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV");
+```
 ### getTransactions(account_name, [skip_seq], [num_seq])
 Retrieve all transactions with specific account name referenced in their scope
 ```javascript
