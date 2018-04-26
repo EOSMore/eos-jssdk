@@ -8,19 +8,19 @@ export default {
   },
   get_code: {
     params: {
-      account_name: Name
+      account_name: Name.required()
     }
   },
   get_currency_stats: {
     params: {
-      code: Name,
-      symbol: String
+      code: Name.required(),
+      symbol: String.required()
     }
   },
   get_currency_balance: {
     params: {
-      code: Name,
-      account: Name,
+      code: Name.required(),
+      account: Name.required(),
       symbol: String
     }
   },
@@ -44,7 +44,7 @@ export default {
   },
   get_block: {
     params: {
-      block_num_or_id: BlockIdOrNum
+      block_num_or_id: BlockIdOrNum.required()
     }
   }
 };
