@@ -1,10 +1,18 @@
+import keys from 'lodash/keys';
+import isObject from 'lodash/isObject';
 import { validate } from './schema';
 
 export default (url, definition) => {
-  return async (params, option = {}) => {
+  return async (...args) => {
+    let params = {};
+    if (args.length === 1 && isObject(args[0])) {
+      params = args[0];
+    } else {
+      keys(definition.params).forEach((key, index) => params[key] = args[index]);
+    }
     try {
       params = await validate(params, definition.params);
-      const res = await fetch(url, { body: JSON.stringify(params), method: 'POST' }).then(response => {
+      return await fetch(url, { body: JSON.stringify(params), method: 'POST' }).then(response => {
         if (response.status >= 200 && response.status < 300) {
           return response.json();
         } else {
@@ -19,7 +27,6 @@ export default (url, definition) => {
         console.error(error);
         throw error;
       });
-      return res;
     } catch (error) {
       console.error(error);
       throw error;
