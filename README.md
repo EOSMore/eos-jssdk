@@ -79,3 +79,13 @@ Retrieve the contents of a database table
 ```javascript
 eos.getTableRows('eosio.token', 'eosio', 'accounts')
 ```
+### getTransactions(account_name, [skip_seq], [num_seq])
+Retrieve all transactions with specific account name referenced in their scope
+```javascript
+eos.getTransactions('more');
+```
+### getTransaction(transaction_id)
+Retrieve a transaction from the blockchain
+```javascript
+eos.getTransaction('a2a068628cb3ccdbad992ea6410404232330d57bb3bf50201934d51218136c3d');
+```
