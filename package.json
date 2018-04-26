@@ -1,7 +1,7 @@
 {
   "name": "eos-jssdk",
-  "version": "1.0.0",
-  "description": "Describe eos-jssdk here",
+  "version": "0.1.0",
+  "description": "EOS Javascript SDK",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -17,9 +17,15 @@
     "test:watch": "nwb test --server"
   },
   "dependencies": {
+    "joi": "^13.2.0",
+    "joi-browser": "^13.0.1",
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
     "nwb": "0.21.x"
+  },
+  "browser": {
+    "joi": "joi-browser"
   },
   "author": "",
   "homepage": "",

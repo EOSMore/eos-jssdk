@@ -1,1 +1,5 @@
-export default 'Welcome to eos-jssdk'
+import create from './create';
+
+export default {
+  create
+};
