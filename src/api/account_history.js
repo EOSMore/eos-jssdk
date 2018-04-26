@@ -1,6 +1,11 @@
 import { Name, Number, String, PublicKey } from '../schema';
 
 export default {
+  get_controlled_accounts: {
+    params: {
+      controlling_account: Name.required()
+    }
+  },
   get_key_accounts: {
     params: {
       public_key: PublicKey.required()

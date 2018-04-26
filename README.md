@@ -79,6 +79,11 @@ Retrieve the contents of a database table
 ```javascript
 eos.getTableRows('eosio.token', 'eosio', 'accounts')
 ```
+### getControlledAccounts(controlling_account)
+Retrieve accounts which are servants of a given account
+```javascript
+eos.getControlledAccounts('eosio');
+```
 ### getKeyAccounts(public_key)
 Retrieve accounts associated with a public key
 ```javascript
