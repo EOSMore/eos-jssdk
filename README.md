@@ -19,6 +19,16 @@ eos.getAccount('eosio');
 // use object param
 eos.getAccount({ account_name: 'eosio' });
 ```
+### getBlock(block_num_or_id)
+Retrieve a full block from the blockchain
+```javascript
+// get block by block id
+eos.getBlock('000000028c06df8874cd2b481fa3fd8bd56d83122f9bdd48b836b9731227d53a');
+// get block by block num
+eos.getBlock(2);
+// use object param
+eos.getBlock({ block_num_or_id: 2 });
+```
 ### getCode(account_name)
 Retrieve the code and ABI for an account
 ```javascript
@@ -64,13 +74,8 @@ Get current blockchain information
 ```javascript
 eos.getInfo();
 ```
-### getBlock(block_num_or_id)
-Retrieve a full block from the blockchain
+### getTableRows(code, scope, table, [limit = 10], [json = true])
+Retrieve the contents of a database table
 ```javascript
-// get block by block id
-eos.getBlock('000000028c06df8874cd2b481fa3fd8bd56d83122f9bdd48b836b9731227d53a');
-// get block by block num
-eos.getBlock(2);
-// use object param
-eos.getBlock({ block_num_or_id: 2 });
+eos.getTableRows('eosio.token', 'eosio', 'accounts')
 ```

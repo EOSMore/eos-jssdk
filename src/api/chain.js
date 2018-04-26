@@ -6,6 +6,11 @@ export default {
       account_name: Name.required()
     }
   },
+  get_block: {
+    params: {
+      block_num_or_id: BlockIdOrNum.required()
+    }
+  },
   get_code: {
     params: {
       account_name: Name.required()
@@ -24,6 +29,9 @@ export default {
       symbol: String
     }
   },
+  get_info: {
+
+  },
   get_table_rows: {
     params: {
       code: Name.required(),
@@ -37,14 +45,6 @@ export default {
         type: Boolean,
         default: true
       }
-    }
-  },
-  get_info: {
-
-  },
-  get_block: {
-    params: {
-      block_num_or_id: BlockIdOrNum.required()
     }
   }
 };
