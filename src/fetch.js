@@ -1,5 +1,6 @@
 import keys from 'lodash/keys';
 import isObject from 'lodash/isObject';
+import take from 'lodash/take';
 import { validate } from './schema';
 
 export default (url, definition) => {
@@ -8,7 +9,7 @@ export default (url, definition) => {
     if (args.length === 1 && isObject(args[0])) {
       params = args[0];
     } else {
-      keys(definition.params).forEach((key, index) => params[key] = args[index]);
+      take(keys(definition.params), args.length).forEach((key, index) => params[key] = args[index]);
     }
     try {
       params = await validate(params, definition.params);
