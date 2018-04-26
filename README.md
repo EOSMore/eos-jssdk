@@ -27,12 +27,12 @@ eos.getCode('eosio');
 // use object param
 eos.getCode({ account_name: 'eosio' });
 ```
-### get_info()
+### getInfo()
 Get current blockchain information
 ```javascript
 eos.getInfo();
 ```
-### get_block(block_num_or_id)
+### getBlock(block_num_or_id)
 Retrieve a full block from the blockchain
 ```javascript
 // get block by block id
