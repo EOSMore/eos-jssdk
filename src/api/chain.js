@@ -1,4 +1,4 @@
-import { Name } from '../schema';
+import { Name, BlockIdOrNum } from '../schema';
 
 export default {
   get_account: {
@@ -8,5 +8,10 @@ export default {
   },
   get_info: {
 
+  },
+  get_block: {
+    params: {
+      block_num_or_id: BlockIdOrNum
+    }
   }
 };
