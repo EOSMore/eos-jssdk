@@ -27,6 +27,33 @@ eos.getCode('eosio');
 // use object param
 eos.getCode({ account_name: 'eosio' });
 ```
+### getCurrencyBalance(code, account, [symbol])
+Retrieve the balance of an account for a given currency
+
+**Get All Symbols**
+```javascript
+eos.getCurrencyBalance('eosio.token', 'eosio');
+```
+return
+```
+[
+    "1000000000.0000 EOS",
+    "1000000000.0000 MORE"
+]
+```
+**Specify symbol**
+```javascript
+eos.getCurrencyBalance('eosio.token', 'eosio', 'EOS');
+//or
+eos.getCurrencyBalance({ code: 'eosio.token', account: 'eosio', symbol: 'EOS' });
+```
+return
+```
+[
+    "1000000000.0000 EOS"
+]
+```
+
 ### getInfo()
 Get current blockchain information
 ```javascript

@@ -1,4 +1,4 @@
-import { Name, BlockIdOrNum } from '../schema';
+import { Name, String, BlockIdOrNum } from '../schema';
 
 export default {
   get_account: {
@@ -9,6 +9,13 @@ export default {
   get_code: {
     params: {
       account_name: Name
+    }
+  },
+  get_currency_balance: {
+    params: {
+      code: Name,
+      account: Name,
+      symbol: String
     }
   },
   get_info: {
