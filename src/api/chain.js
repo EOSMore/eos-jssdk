@@ -6,6 +6,11 @@ export default {
       account_name: Name
     }
   },
+  get_code: {
+    params: {
+      account_name: Name
+    }
+  },
   get_info: {
 
   },
