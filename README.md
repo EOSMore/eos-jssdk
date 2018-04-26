@@ -1,16 +1,9 @@
 # eos-jssdk
+JS SDK for [EOS](https://github.com/EOSIO/eos)
+## USE
+```javascript
+import EOS from 'eos-jssdk';
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
-
-Describe eos-jssdk here.
-
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
-
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+const eos =  EOS.create();
+eos.getAccount({ account_name: 'eosio' }).then(account => console.log(account));
+```
