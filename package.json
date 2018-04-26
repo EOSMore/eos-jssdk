@@ -1,6 +1,6 @@
 {
   "name": "eos-jssdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "EOS Javascript Libraries By More.Top",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -28,6 +28,7 @@
     "joi": "joi-browser"
   },
   "author": "MORE",
+  "keywords": ["eos", "eosio", "blockchain", "js", "javascript", "sdk"],
   "homepage": "https://more.top",
   "license": "MIT",
   "repository": "https://github.com/EOSMore/eos-jssdk"
