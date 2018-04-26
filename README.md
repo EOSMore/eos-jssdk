@@ -27,6 +27,11 @@ eos.getCode('eosio');
 // use object param
 eos.getCode({ account_name: 'eosio' });
 ```
+### getCurrencyStats(code, symbol)
+Retrieve the stats of for a given currency
+```javascript
+eos.getCurrencyStats('eosio.token', 'EOS');
+```
 ### getCurrencyBalance(code, account, [symbol])
 Retrieve the balance of an account for a given currency
 

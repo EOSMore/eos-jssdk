@@ -11,6 +11,12 @@ export default {
       account_name: Name
     }
   },
+  get_currency_stats: {
+    params: {
+      code: Name,
+      symbol: String
+    }
+  },
   get_currency_balance: {
     params: {
       code: Name,
